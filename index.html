@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Felipe & Lara 🌹</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+overflow-x:hidden;
+color:white;
+}
+
+/* ENTER */
+#enterScreen{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:10000;
+}
+
+#enterScreen h1{
+color:#e50914;
+font-size:2rem;
+margin-bottom:20px;
+}
+
+#enterBtn{
+padding:15px 25px;
+background:#e50914;
+border:none;
+color:white;
+font-size:1rem;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* INTRO */
+.intro{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.intro video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* SLIDES */
+.slide{
+width:100%;
+min-height:100vh;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:110px 20px;
+text-align:center;
+opacity:0;
+transform:scale(1.05);
+transition:.7s ease;
+}
+
+.slide.active{
+display:flex;
+opacity:1;
+transform:scale(1);
+}
+
+/* CARD */
+.card{
+background:rgba(20,20,20,0.85);
+border:1px solid rgba(229,9,20,0.25);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+max-width:900px;
+width:100%;
+}
+
+/* TEXTOS */
+h1{
+font-size:3rem;
+color:#e50914;
+margin-bottom:20px;
+}
+
+h2{
+font-size:2rem;
+color:#e50914;
+margin-bottom:20px;
+}
+
+p{
+font-size:1rem;
+line-height:1.6;
+color:#e5e5e5;
+text-align:left;
+}
+
+/* IMAGEM */
+img{
+width:100%;
+max-width:320px;
+border-radius:15px;
+margin-top:10px;
+}
+
+/* VIDEO */
+video{
+width:100%;
+max-width:420px;
+aspect-ratio:9/16;
+object-fit:contain;
+border-radius:15px;
+margin-top:10px;
+}
+
+/* BOTÕES */
+.buttons{
+position:fixed;
+top:20px;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:0 20px;
+z-index:999;
+pointer-events:none;
+}
+
+button.nav{
+pointer-events:auto;
+padding:12px 18px;
+border-radius:10px;
+background:rgba(0,0,0,0.6);
+border:1px solid rgba(229,9,20,0.4);
+color:white;
+cursor:pointer;
+}
+
+button.nav:hover{
+background:#e50914;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.slide{
+min-height:100vh;
+padding:120px 15px;
+}
+h1{font-size:2.2rem;}
+h2{font-size:1.6rem;}
+p{font-size:0.95rem;}
+img,video{max-width:100%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ENTER -->
+<div id="enterScreen">
+<h1>Felipe & Lara 🌹</h1>
+<button id="enterBtn">Entrar ▶</button>
+</div>
+
+<!-- INTRO -->
+<div class="intro" id="intro">
+<video id="introVideo" playsinline>
+<source src="Netflix_Intro_Template_V1.mp4" type="video/mp4">
+</video>
+</div>
+
+<!-- AUDIO -->
+<audio id="netflixSound">
+<source src="nouveau-jingle-netflix.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SLIDES -->
+
+<div class="slide active">
+<div class="card">
+<h1>Felipe & Lara 🌹</h1>
+<p style="text-align:center;">
+Um lugar feito para guardar detalhes,
+momentos e sentimentos
+que acabaram aproximando
+duas pessoas de forma inesperada.
+</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="card">
+<h2>Sobre Mim ✨</h2>
+<p>
+👤 • Me chamo Felipe Silva Mota.<br>
+🎂 • Nasci em Inhumas no dia 05/12/2001.<br>
+⚖️ • Sou formado em Direito.<br>
+💻 • Gosto muito de tecnologia.<br>
+🧴 • Viciado em perfumes kk.<br>
+🏋️ • Gosto de academia.<br>
+🎮 • Gosto de jogos.<br>
+🤍 • Valorizo tempo de qualidade.<br>
+💭 • Me dedico quando gosto de alguém.
+</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="card">
+<h2>Sobre Você 🌸</h2>
+<p>
+🎂 • Você nasceu em 23/12.<br>
+🖤 • Você odeia rosa.<br>
+✋ • Você é canhota.<br>
+🖤 • Você combina mais com preto.<br>
+🍣 • Ama comida japonesa.<br>
+🥩 • Churrasco também.<br>
+🍫 • Gosta de doces.<br>
+🌹 • Flores te ganham fácil.<br>
+🍺 • Cervejinha também kk.<br>
+🏋️ • Academia e pré treino.<br>
+🥋 • Jiu-jitsu.<br>
+🥊 • Muay thai.<br>
+🎵 • Funk e eletro dominam.<br>
+⚡ • Gosta de adrenalina.
+</p>
+</div>
+</div>
+
+<!-- FOTO TREINO -->
+<div class="slide">
+<div class="card">
+<h2>Nosso Domingo 📸</h2>
+<img src="Lara Alice.jpeg">
+<p>
+🏋️ • Essa foto do treino acabou ficando muito especial pra mim.<br>
+✨ • Um momento simples,<br>
+mas que marcou bastante.<br>
+🤍 • Foi um daqueles momentos<br>
+que parecem pequenos,<br>
+mas ficam na memória.
+</p>
+</div>
+</div>
+
+<!-- FOTO OCULOS -->
+<div class="slide">
+<div class="card">
+<h2>Seu Jeito 🌹</h2>
+<img src="oculos.jpeg">
+<p>
+😍 • Essa foto ficou absurda.<br>
+🕶️ • O óculos ajuda,<br>
+mas você chama atenção naturalmente.<br>
+🌹 • Seu olhar me desmonta.
+</p>
+</div>
+</div>
+
+<!-- SITE -->
+<div class="slide">
+<div class="card">
+<h2>O Site Especial 💜</h2>
+<p>
+🌹 • Foi um jeito de eternizar nossos momentos.<br>
+✨ • Algumas coisas merecem ser lembradas.
+</p>
+
+<a href="https://lara-woad-gamma.vercel.app/" target="_blank"
+style="color:#e50914;display:inline-block;margin-top:15px;">
+🔗 Abrir Site Especial
+</a>
+
+</div>
+</div>
+
+<!-- LOCAL -->
+<div class="slide">
+<div class="card">
+<h2>Meu Trabalho 💼</h2>
+<p>
+🏢 • Local onde passo meu dia.<br>
+🤍 • Queria sua visita kk.
+</p>
+
+<a href="https://maps.app.goo.gl/G25cMN2Goyyg99iu8" target="_blank"
+style="color:#e50914;display:inline-block;margin-top:15px;">
+📍 Abrir Localização
+</a>
+
+</div>
+</div>
+
+<!-- VIDEO -->
+<div class="slide">
+<div class="card">
+<h2>Meu Pedido De Perdão 🎥</h2>
+<video controls>
+<source src="perdao.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+<!-- FINAL -->
+<div class="slide">
+<div class="card">
+<h2>Final 🌹</h2>
+<p style="text-align:center;">
+🌹 EU SEI QUE ERREI COM VOCÊ.<br><br>
+🤍 VOCÊ FOI UMA DAS MELHORES COISAS DA MINHA VIDA.<br><br>
+✨ ME DESCULPA.
+</p>
+</div>
+</div>
+
+<!-- BOTÕES -->
+<div class="buttons">
+<button class="nav" onclick="anterior()">⬅</button>
+<button class="nav" onclick="proximo()">➡</button>
+</div>
+
+<script>
+
+const slides = document.querySelectorAll('.slide');
+let atual = 0;
+
+function mostrar(i){
+slides.forEach(s=>s.classList.remove('active'));
+slides[i].classList.add('active');
+}
+
+function proximo(){
+if(atual < slides.length-1){
+atual++;
+mostrar(atual);
+}
+}
+
+function anterior(){
+if(atual > 0){
+atual--;
+mostrar(atual);
+}
+}
+
+/* INTRO */
+document.getElementById("enterBtn").addEventListener("click", ()=>{
+
+const intro = document.getElementById("intro");
+const video = document.getElementById("introVideo");
+const audio = document.getElementById("netflixSound");
+
+document.getElementById("enterScreen").style.display="none";
+
+intro.style.display="flex";
+
+audio.volume=1;
+audio.play().catch(()=>{});
+
+video.play().catch(()=>{
+intro.style.display="none";
+});
+
+video.onended=()=>{
+intro.style.display="none";
+};
+
+setTimeout(()=> intro.style.display="none", 9000);
+
+});
+
+</script>
+
+</body>
+</html>
