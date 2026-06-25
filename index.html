@@ -1,42 +1,149 @@
-<!-- ÚLTIMA MENSAGEM -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="slide">
-    <div class="card">
+<title>Uma Última Mensagem 🤍</title>
 
-```
-    <h2>Uma Última Mensagem 🤍</h2>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <p style="text-align:center; font-size:1.15rem; line-height:2;">
+<style>
 
-        Sempre sentirei saudade de você.
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        <br><br>
+body{
+background:
+linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.95)),
+url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:hidden;
+}
 
-        Fiz isso porque não acho certo dividir você com alguém.
+.card{
+width:100%;
+max-width:900px;
+background:rgba(0,0,0,.70);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+padding:50px;
+text-align:center;
+animation:fadeIn 2s ease;
+box-shadow:0 0 50px rgba(0,0,0,.5);
+}
 
-        <br><br>
+h1{
+color:#fff;
+font-size:2.6rem;
+margin-bottom:40px;
+font-weight:600;
+}
 
-        E hoje, meu maior sonho é receber uma mensagem sua dizendo que resolveu a sua vida...
+p{
+color:#f1f1f1;
+font-size:1.2rem;
+line-height:2.2;
+font-weight:300;
+}
 
-        <br><br>
+.destaque{
+color:#ffffff;
+font-weight:600;
+}
 
-        ...e que agora podemos organizar a nossa.
+.assinatura{
+margin-top:40px;
+font-size:1.8rem;
+}
 
-        <br><br>
+@keyframes fadeIn{
 
-        Mas até lá,
+from{
+opacity:0;
+transform:translateY(40px);
+}
 
-        <br><br>
+to{
+opacity:1;
+transform:translateY(0);
+}
 
-        estarei te esperando.
+}
 
-        <br><br>
+@media(max-width:768px){
 
-        🤍
+.card{
+padding:30px;
+}
 
-    </p>
+h1{
+font-size:2rem;
+}
+
+p{
+font-size:1rem;
+line-height:2;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Uma Última Mensagem 🤍</h1>
+
+<p>
+
+Sempre sentirei saudade de você.
+
+<br><br>
+
+Fiz isso porque não acho certo dividir você com alguém.
+
+<br><br>
+
+E o meu maior sonho agora é receber uma mensagem sua dizendo que resolveu a sua vida...
+
+<br><br>
+
+<span class="destaque">
+...e que podemos organizar a nossa.
+</span>
+
+<br><br>
+
+Mas até lá,
+
+<br><br>
+
+<span class="destaque">
+estarei te esperando.
+</span>
+
+</p>
+
+<div class="assinatura">
+🤍
+</div>
 
 </div>
-```
 
-</div>
+</body>
+</html>
