@@ -19,7 +19,7 @@ font-family:'Poppins',sans-serif;
 
 body{
 background:
-linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.95)),
+linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.96)),
 url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600');
 background-size:cover;
 background-position:center;
@@ -29,34 +29,37 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:20px;
-overflow:hidden;
+overflow:auto;
 }
 
 .card{
 width:100%;
-max-width:950px;
+max-width:900px;
 background:rgba(0,0,0,.72);
 backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,.08);
 border-radius:28px;
-padding:60px;
+padding:60px 50px;
 text-align:center;
-animation:fadeIn 2s ease;
-box-shadow:0 0 60px rgba(0,0,0,.6);
+animation:fadeIn 1.8s ease;
+box-shadow:0 0 60px rgba(0,0,0,.7);
 }
 
 h1{
 color:#fff;
-font-size:2.8rem;
-margin-bottom:40px;
+font-size:2.6rem;
+margin-bottom:35px;
 font-weight:600;
+letter-spacing:.5px;
 }
 
 p{
 color:#f2f2f2;
 font-size:1.15rem;
-line-height:2.3;
+line-height:2.4;
 font-weight:300;
+max-width:750px;
+margin:0 auto;
 }
 
 .destaque{
@@ -65,37 +68,42 @@ color:#ffffff;
 }
 
 .assinatura{
-margin-top:45px;
-font-size:2rem;
+margin-top:50px;
+font-size:2.2rem;
+opacity:.9;
 }
 
 @keyframes fadeIn{
-
 from{
 opacity:0;
-transform:translateY(40px);
+transform:translateY(30px);
 }
-
 to{
 opacity:1;
 transform:translateY(0);
 }
-
 }
 
+/* celular */
 @media(max-width:768px){
 
 .card{
-padding:35px 25px;
+padding:35px 20px;
+border-radius:20px;
 }
 
 h1{
-font-size:2rem;
+font-size:1.9rem;
 }
 
 p{
 font-size:1rem;
-line-height:2;
+line-height:2.1;
+}
+
+.assinatura{
+font-size:1.8rem;
+margin-top:35px;
 }
 
 }
@@ -147,9 +155,7 @@ E, no fundo, guardando a esperança de que um dia nossos caminhos possam se enco
 
 </p>
 
-<div class="assinatura">
-🤍
-</div>
+<div class="assinatura">🤍</div>
 
 </div>
 
