@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,146 +19,343 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
+
 background:
-linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.96)),
-url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600');
+linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.95)),
+url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600");
+
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
+
 min-height:100vh;
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 padding:20px;
-overflow:auto;
+
 }
 
 .card{
+
 width:100%;
-max-width:900px;
+max-width:950px;
+
 background:rgba(0,0,0,.72);
 backdrop-filter:blur(18px);
+
 border:1px solid rgba(255,255,255,.08);
+
 border-radius:28px;
-padding:60px 50px;
-text-align:center;
-animation:fadeIn 1.8s ease;
-box-shadow:0 0 60px rgba(0,0,0,.7);
+
+padding:55px;
+
+box-shadow:0 0 60px rgba(0,0,0,.6);
+
+animation:fade 1s ease;
+
 }
 
 h1{
+
 color:#fff;
+
 font-size:2.6rem;
-margin-bottom:35px;
+
+text-align:center;
+
+margin-bottom:40px;
+
 font-weight:600;
-letter-spacing:.5px;
+
 }
 
 p{
-color:#f2f2f2;
-font-size:1.15rem;
-line-height:2.4;
+
+color:#F2F2F2;
+
+font-size:1.12rem;
+
+line-height:2.3;
+
 font-weight:300;
-max-width:750px;
-margin:0 auto;
+
 }
 
-.destaque{
+strong{
+
 font-weight:600;
-color:#ffffff;
+
+color:#fff;
+
 }
 
-.assinatura{
-margin-top:50px;
-font-size:2.2rem;
-opacity:.9;
+.ass{
+
+margin-top:45px;
+
+text-align:center;
+
+font-size:2rem;
+
 }
 
-@keyframes fadeIn{
+#mensagem{
+
+display:none;
+
+}
+
+.login{
+
+text-align:center;
+
+}
+
+.login h2{
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+input{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:14px;
+
+margin:20px 0;
+
+font-size:16px;
+
+text-align:center;
+
+}
+
+button{
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:16px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+@keyframes fade{
+
 from{
+
 opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+
+transform:translateY(20px);
+
 }
 
-/* celular */
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
 @media(max-width:768px){
 
 .card{
-padding:35px 20px;
-border-radius:20px;
+
+padding:30px;
+
 }
 
 h1{
-font-size:1.9rem;
+
+font-size:2rem;
+
 }
 
 p{
-font-size:1rem;
-line-height:2.1;
-}
 
-.assinatura{
-font-size:1.8rem;
-margin-top:35px;
+font-size:1rem;
+
+line-height:2;
+
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="card">
+<div class="card login" id="login">
+
+<h2>🤍</h2>
+
+<p style="margin-bottom:20px;color:#fff;">
+Essa mensagem foi escrita para apenas uma pessoa.
+</p>
+
+<input
+type="password"
+id="senha"
+placeholder="Digite a senha">
+
+<button onclick="entrar()">
+Entrar
+</button>
+
+</div>
+
+<div class="card" id="mensagem">
 
 <h1>Uma Última Mensagem 🤍</h1>
 
 <p>
 
-Sempre sentirei saudade de você.
+Se você chegou até aqui, provavelmente era porque eu ainda tinha algo que precisava dizer.
 
 <br><br>
 
-Tomei essa decisão porque, por mais que o que eu sinto seja verdadeiro, eu não consigo encontrar paz ocupando um espaço que hoje pertence a outra história.
+Durante esse tempo ao seu lado eu vivi momentos que jamais vou esquecer.
+
+Foram conversas, viagens, risadas, abraços, carinho, pequenas lembranças e muitos gestos que fizeram parte da minha vida.
+
+Obrigado por tudo isso.
 
 <br><br>
 
-Você merece resolver tudo aquilo que ainda precisa ser resolvido, sem pressão, sem cobranças e no seu próprio tempo.
+Também queria te agradecer por ter sido sincera comigo.
+
+Talvez tenha doído ouvir algumas coisas, mas hoje percebo que a honestidade sempre foi melhor do que alimentar uma ilusão.
 
 <br><br>
 
-E o meu maior sonho agora é receber uma mensagem sua dizendo que a sua vida finalmente encontrou o caminho que você procurava...
+Você me disse que gosta de mim, mas que neste momento não consegue viver o tipo de relacionamento que eu desejo.
+
+E eu finalmente entendi que continuar insistindo faria mal para nós dois.
 
 <br><br>
 
-<span class="destaque">
-...e que então podemos tentar organizar a nossa.
-</span>
+Você não está errada por viver o seu momento.
+
+E eu também não estou errado por querer algo diferente.
+
+Apenas descobrimos que nossos caminhos, hoje, seguem em direções diferentes.
 
 <br><br>
 
-Mas até lá,
+Quero que saiba que nunca fiz tudo o que fiz esperando algo em troca.
+
+Sempre cuidei de você porque era verdadeiro.
+
+E se algum dia errei, foi porque também sou humano e deixei o sentimento falar mais alto.
 
 <br><br>
 
-<span class="destaque">
-estarei torcendo pela sua felicidade, mesmo que de longe.
-</span>
+Apesar de tudo, eu escolho guardar as boas lembranças.
+
+É assim que quero lembrar de você.
 
 <br><br>
 
-E, no fundo, guardando a esperança de que um dia nossos caminhos possam se encontrar novamente.
+Espero que você conquiste tudo aquilo que sonha.
+
+Que encontre paz.
+
+Que continue crescendo.
+
+E que Deus cuide da sua vida em cada passo.
+
+<br><br>
+
+Quanto a mim...
+
+Agora preciso seguir o meu caminho.
+
+Não porque deixei de gostar de você.
+
+Mas porque aprendi que gostar de alguém também significa aceitar quando essa pessoa não consegue oferecer o mesmo que precisamos.
+
+<br><br>
+
+<strong>
+
+Obrigado por tudo.
+
+Fica com Deus.
+
+Seja muito feliz.
+
+Essa será realmente minha última mensagem.
+
+</strong>
 
 </p>
 
-<div class="assinatura">🤍</div>
+<div class="ass">
+🤍
+</div>
 
 </div>
+
+<script>
+
+function entrar(){
+
+let senha=document.getElementById("senha").value;
+
+if(senha==="Minha loira"){
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("mensagem").style.display="block";
+
+}else{
+
+alert("Senha incorreta.");
+
+}
+
+}
+
+document.getElementById("senha").addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+entrar();
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
