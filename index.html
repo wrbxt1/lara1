@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Uma Última Mensagem 🤍</title>
+<title>Uma Última Carta</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -21,8 +22,8 @@ font-family:'Poppins',sans-serif;
 body{
 
 background:
-linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.95)),
-url("https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600");
+linear-gradient(rgba(7,10,18,.82),rgba(4,6,12,.94)),
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1800");
 
 background-size:cover;
 background-position:center;
@@ -34,91 +35,79 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-padding:20px;
+padding:25px;
+
+overflow-x:hidden;
 
 }
 
-.card{
+body::before{
+
+content:"";
+
+position:fixed;
+left:0;
+top:0;
 
 width:100%;
-max-width:950px;
+height:100%;
 
-background:rgba(0,0,0,.72);
+background:rgba(255,255,255,.02);
+
+backdrop-filter:blur(2px);
+
+pointer-events:none;
+
+}
+
+.container{
+
+width:100%;
+max-width:900px;
+
+animation:fade 1.5s ease;
+
+}
+
+.passwordBox{
+
+background:rgba(0,0,0,.68);
+
 backdrop-filter:blur(18px);
 
 border:1px solid rgba(255,255,255,.08);
 
 border-radius:28px;
 
-padding:55px;
+padding:55px 40px;
+
+text-align:center;
 
 box-shadow:0 0 60px rgba(0,0,0,.6);
 
-animation:fade 1s ease;
-
 }
 
-h1{
-
-color:#fff;
-
-font-size:2.6rem;
-
-text-align:center;
-
-margin-bottom:40px;
-
-font-weight:600;
-
-}
-
-p{
-
-color:#F2F2F2;
-
-font-size:1.12rem;
-
-line-height:2.3;
-
-font-weight:300;
-
-}
-
-strong{
-
-font-weight:600;
-
-color:#fff;
-
-}
-
-.ass{
-
-margin-top:45px;
-
-text-align:center;
-
-font-size:2rem;
-
-}
-
-#mensagem{
-
-display:none;
-
-}
-
-.login{
-
-text-align:center;
-
-}
-
-.login h2{
+.passwordBox h1{
 
 color:white;
 
-margin-bottom:20px;
+font-size:2.2rem;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+}
+
+.passwordBox p{
+
+color:#d8d8d8;
+
+line-height:1.9;
+
+font-size:1rem;
+
+margin-bottom:35px;
 
 }
 
@@ -126,41 +115,139 @@ input{
 
 width:100%;
 
-padding:16px;
+padding:18px;
 
 border:none;
 
+outline:none;
+
 border-radius:14px;
 
-margin:20px 0;
+background:rgba(255,255,255,.08);
 
-font-size:16px;
+color:white;
+
+font-size:1rem;
 
 text-align:center;
+
+transition:.35s;
+
+}
+
+input:focus{
+
+background:rgba(255,255,255,.12);
 
 }
 
 button{
 
-padding:15px 40px;
+margin-top:25px;
+
+padding:16px 38px;
 
 border:none;
 
-border-radius:12px;
-
-font-size:16px;
+border-radius:14px;
 
 cursor:pointer;
 
+background:white;
+
+color:#111;
+
+font-size:1rem;
+
 font-weight:600;
 
-transition:.3s;
+transition:.35s;
 
 }
 
 button:hover{
 
-transform:scale(1.05);
+transform:translateY(-2px);
+
+box-shadow:0 10px 25px rgba(255,255,255,.15);
+
+}
+
+#error{
+
+margin-top:20px;
+
+color:#ff8d8d;
+
+font-size:.95rem;
+
+display:none;
+
+}
+
+.card{
+
+display:none;
+
+background:rgba(0,0,0,.68);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:30px;
+
+padding:65px 55px;
+
+box-shadow:0 0 70px rgba(0,0,0,.6);
+
+animation:showCard 1.2s ease;
+
+}
+
+.card h1{
+
+color:white;
+
+font-size:2.6rem;
+
+font-weight:600;
+
+text-align:center;
+
+margin-bottom:45px;
+
+}
+
+.card p{
+
+color:#f2f2f2;
+
+font-size:1.12rem;
+
+line-height:2.35;
+
+font-weight:300;
+
+}
+
+.destaque{
+
+font-weight:600;
+
+color:white;
+
+}
+
+.assinatura{
+
+margin-top:55px;
+
+text-align:center;
+
+font-size:2rem;
+
+opacity:.85;
 
 }
 
@@ -169,16 +256,32 @@ transform:scale(1.05);
 from{
 
 opacity:0;
-
-transform:translateY(20px);
+transform:translateY(25px);
 
 }
 
 to{
 
 opacity:1;
-
 transform:translateY(0);
+
+}
+
+}
+
+@keyframes showCard{
+
+from{
+
+opacity:0;
+transform:scale(.97);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
 
 }
 
@@ -186,23 +289,35 @@ transform:translateY(0);
 
 @media(max-width:768px){
 
-.card{
+.passwordBox{
 
-padding:30px;
+padding:35px 22px;
 
 }
 
-h1{
+.passwordBox h1{
+
+font-size:1.8rem;
+
+}
+
+.card{
+
+padding:40px 22px;
+
+}
+
+.card h1{
 
 font-size:2rem;
 
 }
 
-p{
+.card p{
 
 font-size:1rem;
 
-line-height:2;
+line-height:2.1;
 
 }
 
@@ -214,12 +329,20 @@ line-height:2;
 
 <body>
 
-<div class="card login" id="login">
+<div class="container">
 
-<h2>🤍</h2>
+<div class="passwordBox" id="login">
 
-<p style="margin-bottom:20px;color:#fff;">
-Essa mensagem foi escrita para apenas uma pessoa.
+<h1>🤍</h1>
+
+<p>
+
+Existe uma única pessoa para quem esta carta foi escrita.
+
+<br><br>
+
+Se ela chegou até você, basta lembrar do apelido que eu sempre usava.
+
 </p>
 
 <input
@@ -228,118 +351,232 @@ id="senha"
 placeholder="Digite a senha">
 
 <button onclick="entrar()">
-Entrar
+
+Abrir Carta
+
 </button>
+
+<div id="error">
+
+Senha incorreta.
 
 </div>
 
-<div class="card" id="mensagem">
+</div>
 
-<h1>Uma Última Mensagem 🤍</h1>
+<div class="card" id="carta">
+
+<h1>Uma Última Carta</h1>
 
 <p>
 
-Se você chegou até aqui, provavelmente era porque eu ainda tinha algo que precisava dizer.
+  Eu pensei muito antes de escrever isso.
 
 <br><br>
 
-Durante esse tempo ao seu lado eu vivi momentos que jamais vou esquecer.
-
-Foram conversas, viagens, risadas, abraços, carinho, pequenas lembranças e muitos gestos que fizeram parte da minha vida.
-
-Obrigado por tudo isso.
+Talvez essa seja realmente a última vez que você leia algo escrito por mim.
 
 <br><br>
 
-Também queria te agradecer por ter sido sincera comigo.
+Não escrevo para tentar mudar sua decisão, nem para fazer você sentir culpa. Também não escrevo esperando uma resposta.
 
-Talvez tenha doído ouvir algumas coisas, mas hoje percebo que a honestidade sempre foi melhor do que alimentar uma ilusão.
-
-<br><br>
-
-Você me disse que gosta de mim, mas que neste momento não consegue viver o tipo de relacionamento que eu desejo.
-
-E eu finalmente entendi que continuar insistindo faria mal para nós dois.
+Escrevo porque acredito que algumas histórias merecem um encerramento bonito.
 
 <br><br>
 
-Você não está errada por viver o seu momento.
+Quando tudo começou, eu enxergava em você uma pessoa que me fazia bem. Gostava da sua companhia, do seu jeito, das nossas conversas, das pequenas coisas e de tudo aquilo que fomos construindo aos poucos.
 
-E eu também não estou errado por querer algo diferente.
+Por isso eu me entreguei.
 
-Apenas descobrimos que nossos caminhos, hoje, seguem em direções diferentes.
-
-<br><br>
-
-Quero que saiba que nunca fiz tudo o que fiz esperando algo em troca.
-
-Sempre cuidei de você porque era verdadeiro.
-
-E se algum dia errei, foi porque também sou humano e deixei o sentimento falar mais alto.
+Da forma que eu sei fazer.
 
 <br><br>
 
-Apesar de tudo, eu escolho guardar as boas lembranças.
+Com o tempo, fui percebendo que nós demonstrávamos carinho de maneiras diferentes.
 
-É assim que quero lembrar de você.
+Você nunca me enganou.
 
-<br><br>
+Inclusive foi sincera quando disse que não queria um relacionamento sério naquele momento.
 
-Espero que você conquiste tudo aquilo que sonha.
+Eu ouvi isso.
 
-Que encontre paz.
-
-Que continue crescendo.
-
-E que Deus cuide da sua vida em cada passo.
+Só demorei para aceitar que, mesmo gostando um do outro, isso mudava completamente aquilo que cada um esperava viver.
 
 <br><br>
 
-Quanto a mim...
+Eu queria construir algo.
 
-Agora preciso seguir o meu caminho.
+Você queria leveza.
+
+Nenhum dos dois estava errado.
+
+Só não estávamos procurando a mesma coisa.
+
+<br><br>
+
+Durante esse tempo eu tentei me adaptar.
+
+Esperei.
+
+Respeitei seus momentos.
+
+Entendi seus trabalhos.
+
+Entendi seus horários.
+
+Entendi seus limites.
+
+Mas, aos poucos, fui deixando de respeitar os meus.
+
+<br><br>
+
+Foi aí que percebi que o problema não era falta de sentimento.
+
+Era incompatibilidade.
+
+Eu precisava de uma presença que você não conseguia oferecer.
+
+E você precisava de uma liberdade que eu acabava invadindo sem perceber, justamente porque queria algo diferente.
+
+<br><br>
+
+A nossa conversa daquele dia deixou isso muito claro.
+
+Quando você disse que não conseguiria suprir minhas necessidades e expectativas, eu finalmente entendi que continuar insistindo seria injusto com nós dois.
+
+Você seria cobrada por algo que não queria oferecer.
+
+E eu continuaria esperando algo que dificilmente receberia.
+
+<br><br>
+
+Foi por isso que decidi ir embora.
 
 Não porque deixei de gostar de você.
 
-Mas porque aprendi que gostar de alguém também significa aceitar quando essa pessoa não consegue oferecer o mesmo que precisamos.
+Mas porque comecei a gostar de mim também.
 
 <br><br>
 
-<strong>
+Mesmo depois disso, aconteceram algumas coisas que me fizeram perceber que ainda existia carinho.
+
+Você desejou um bom retorno ao trabalho.
+
+Mandou aquele presente.
+
+Escreveu um cartão.
+
+Foram atitudes bonitas.
+
+E eu guardo isso com muito respeito.
+
+Obrigado por isso.
+
+De verdade.
+
+<br><br>
+
+Esses gestos mostraram que o carinho nunca deixou de existir.
+
+Só confirmaram que carinho, sozinho, nem sempre é suficiente para sustentar uma relação.
+
+<br><br>
+
+Hoje eu não guardo raiva.
+
+Não guardo mágoa.
+
+Também não quero lembrar de quem estava certo ou errado.
+
+Prefiro lembrar que existiu uma pessoa muito importante na minha vida, que me ensinou bastante sobre amor, limites, respeito e principalmente sobre saber a hora de partir.
+
+<br><br>
+
+Eu espero sinceramente que você alcance tudo aquilo que me dizia querer.
+
+Que encontre paz.
+
+Que realize seus sonhos.
+
+Que sua família fique bem.
+
+Que sua vida dê certo.
+
+Porque apesar de tudo, eu nunca deixei de torcer por você.
+
+<br><br>
+
+E quanto a mim...
+
+Vou continuar seguindo.
+
+Levando comigo tudo o que vivi.
+
+Aprendendo com os erros que cometi.
+
+E procurando alguém que deseje caminhar na mesma direção que eu.
+
+<br><br>
+
+Não existe ressentimento nesta carta.
+
+Existe apenas gratidão.
+
+E uma despedida feita com carinho.
+
+<br><br>
+
+Se algum dia você lembrar de mim, espero que seja com um sorriso.
+
+Porque é assim que escolho lembrar de você.
+
+<br><br>
+
+<span class="destaque">
 
 Obrigado por tudo.
 
-Fica com Deus.
+Cuide-se.
 
-Seja muito feliz.
+Seja feliz.
 
-Essa será realmente minha última mensagem.
+</span>
 
-</strong>
+<div class="assinatura">
+
+🤍
+
+</div>
 
 </p>
 
-<div class="ass">
-🤍
-</div>
+  </div>
 
 </div>
 
 <script>
 
+const senhaCorreta = "minhaloira";
+
 function entrar(){
 
-let senha=document.getElementById("senha").value;
+const senha = document.getElementById("senha").value.trim();
 
-if(senha==="minhaloira"){
+if(senha === senhaCorreta){
 
 document.getElementById("login").style.display="none";
+document.getElementById("carta").style.display="block";
 
-document.getElementById("mensagem").style.display="block";
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 }else{
 
-alert("Senha incorreta.");
+document.getElementById("error").style.display="block";
+
+document.getElementById("senha").value="";
 
 }
 
@@ -358,4 +595,5 @@ entrar();
 </script>
 
 </body>
+
 </html>
